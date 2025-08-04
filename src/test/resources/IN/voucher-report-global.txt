@@ -1,0 +1,969 @@
+📊 Rapport Global Analyse Voucher (par séquence stricte)
+
+🧾 Résumé Global Final
+==================================================
+📦 Total fichiers analysés : 404411
+❌ Total fichiers manquants estimés : 10394884
+==================================================
+
+📅 Date analysée : 2025-07-01
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2403
+   - Fichiers manquants estimés : 97548
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2215
+   - Fichiers manquants estimés : 35603
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2344
+   - Fichiers manquants estimés : 97640
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 2266
+   - Fichiers manquants estimés : 32728
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 2358
+   - Fichiers manquants estimés : 33717
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2594
+   - Fichiers manquants estimés : 34975
+
+📌 Résumé Date : 2025-07-01
+   - Total fichiers analysés : 14180
+   - Total fichiers manquants estimés : 332211
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-02
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2190
+   - Fichiers manquants estimés : 33461
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2074
+   - Fichiers manquants estimés : 34691
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2177
+   - Fichiers manquants estimés : 32599
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1982
+   - Fichiers manquants estimés : 97992
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 2209
+   - Fichiers manquants estimés : 32393
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2354
+   - Fichiers manquants estimés : 97592
+
+📌 Résumé Date : 2025-07-02
+   - Total fichiers analysés : 12986
+   - Total fichiers manquants estimés : 328728
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-03
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2312
+   - Fichiers manquants estimés : 97652
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2132
+   - Fichiers manquants estimés : 97800
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2241
+   - Fichiers manquants estimés : 32765
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 2116
+   - Fichiers manquants estimés : 32199
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 2296
+   - Fichiers manquants estimés : 97683
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2491
+   - Fichiers manquants estimés : 33993
+
+📌 Résumé Date : 2025-07-03
+   - Total fichiers analysés : 13588
+   - Total fichiers manquants estimés : 392092
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-04
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2175
+   - Fichiers manquants estimés : 35035
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2100
+   - Fichiers manquants estimés : 35719
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2282
+   - Fichiers manquants estimés : 97712
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 2083
+   - Fichiers manquants estimés : 32570
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 2270
+   - Fichiers manquants estimés : 32820
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2462
+   - Fichiers manquants estimés : 34354
+
+📌 Résumé Date : 2025-07-04
+   - Total fichiers analysés : 13372
+   - Total fichiers manquants estimés : 268210
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-05
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2214
+   - Fichiers manquants estimés : 34504
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2146
+   - Fichiers manquants estimés : 97835
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2354
+   - Fichiers manquants estimés : 33126
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 2117
+   - Fichiers manquants estimés : 97849
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 2285
+   - Fichiers manquants estimés : 32765
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2485
+   - Fichiers manquants estimés : 97484
+
+📌 Résumé Date : 2025-07-05
+   - Total fichiers analysés : 13601
+   - Total fichiers manquants estimés : 393563
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-06
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2054
+   - Fichiers manquants estimés : 97921
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2025
+   - Fichiers manquants estimés : 34664
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2141
+   - Fichiers manquants estimés : 32671
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1905
+   - Fichiers manquants estimés : 31790
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 2170
+   - Fichiers manquants estimés : 97771
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2299
+   - Fichiers manquants estimés : 33826
+
+📌 Résumé Date : 2025-07-06
+   - Total fichiers analysés : 12594
+   - Total fichiers manquants estimés : 328643
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-07
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2108
+   - Fichiers manquants estimés : 34207
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2128
+   - Fichiers manquants estimés : 34317
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2189
+   - Fichiers manquants estimés : 97794
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1946
+   - Fichiers manquants estimés : 32000
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 2218
+   - Fichiers manquants estimés : 32470
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2469
+   - Fichiers manquants estimés : 33826
+
+📌 Résumé Date : 2025-07-07
+   - Total fichiers analysés : 13058
+   - Total fichiers manquants estimés : 264614
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-08
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2262
+   - Fichiers manquants estimés : 34435
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2295
+   - Fichiers manquants estimés : 97688
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2382
+   - Fichiers manquants estimés : 33348
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 2107
+   - Fichiers manquants estimés : 97882
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 2287
+   - Fichiers manquants estimés : 97705
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2666
+   - Fichiers manquants estimés : 97322
+
+📌 Résumé Date : 2025-07-08
+   - Total fichiers analysés : 13999
+   - Total fichiers manquants estimés : 458380
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-09
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 1991
+   - Fichiers manquants estimés : 97965
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2076
+   - Fichiers manquants estimés : 34492
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2097
+   - Fichiers manquants estimés : 32175
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1814
+   - Fichiers manquants estimés : 31808
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 1986
+   - Fichiers manquants estimés : 32186
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2417
+   - Fichiers manquants estimés : 33254
+
+📌 Résumé Date : 2025-07-09
+   - Total fichiers analysés : 12381
+   - Total fichiers manquants estimés : 261880
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-10
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2127
+   - Fichiers manquants estimés : 33920
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2245
+   - Fichiers manquants estimés : 34514
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2372
+   - Fichiers manquants estimés : 97601
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 2039
+   - Fichiers manquants estimés : 32051
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 2113
+   - Fichiers manquants estimés : 33117
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2589
+   - Fichiers manquants estimés : 33772
+
+📌 Résumé Date : 2025-07-10
+   - Total fichiers analysés : 13485
+   - Total fichiers manquants estimés : 264975
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-11
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2112
+   - Fichiers manquants estimés : 34902
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2191
+   - Fichiers manquants estimés : 97786
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2365
+   - Fichiers manquants estimés : 33001
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 2000
+   - Fichiers manquants estimés : 97990
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 2097
+   - Fichiers manquants estimés : 97880
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2512
+   - Fichiers manquants estimés : 97374
+
+📌 Résumé Date : 2025-07-11
+   - Total fichiers analysés : 13277
+   - Total fichiers manquants estimés : 458933
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-12
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2040
+   - Fichiers manquants estimés : 97922
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2204
+   - Fichiers manquants estimés : 34886
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2368
+   - Fichiers manquants estimés : 32696
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1925
+   - Fichiers manquants estimés : 31930
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 2081
+   - Fichiers manquants estimés : 33235
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2520
+   - Fichiers manquants estimés : 33606
+
+📌 Résumé Date : 2025-07-12
+   - Total fichiers analysés : 13138
+   - Total fichiers manquants estimés : 264275
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-13
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 1809
+   - Fichiers manquants estimés : 34647
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2016
+   - Fichiers manquants estimés : 97963
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2182
+   - Fichiers manquants estimés : 97803
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1686
+   - Fichiers manquants estimés : 31955
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 1899
+   - Fichiers manquants estimés : 32319
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2274
+   - Fichiers manquants estimés : 97698
+
+📌 Résumé Date : 2025-07-13
+   - Total fichiers analysés : 11866
+   - Total fichiers manquants estimés : 392385
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-14
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2060
+   - Fichiers manquants estimés : 97936
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2191
+   - Fichiers manquants estimés : 35071
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2326
+   - Fichiers manquants estimés : 32782
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1879
+   - Fichiers manquants estimés : 98096
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 2002
+   - Fichiers manquants estimés : 97963
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2573
+   - Fichiers manquants estimés : 33790
+
+📌 Résumé Date : 2025-07-14
+   - Total fichiers analysés : 13031
+   - Total fichiers manquants estimés : 395638
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-15
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2191
+   - Fichiers manquants estimés : 35099
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2389
+   - Fichiers manquants estimés : 35678
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2522
+   - Fichiers manquants estimés : 33393
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 2030
+   - Fichiers manquants estimés : 33404
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 2125
+   - Fichiers manquants estimés : 32796
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2700
+   - Fichiers manquants estimés : 34374
+
+📌 Résumé Date : 2025-07-15
+   - Total fichiers analysés : 13957
+   - Total fichiers manquants estimés : 204744
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-16
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 1988
+   - Fichiers manquants estimés : 33028
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2100
+   - Fichiers manquants estimés : 97881
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2287
+   - Fichiers manquants estimés : 97661
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1794
+   - Fichiers manquants estimés : 32248
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 1853
+   - Fichiers manquants estimés : 31956
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2487
+   - Fichiers manquants estimés : 97509
+
+📌 Résumé Date : 2025-07-16
+   - Total fichiers analysés : 12509
+   - Total fichiers manquants estimés : 390283
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-17
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2133
+   - Fichiers manquants estimés : 97863
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2291
+   - Fichiers manquants estimés : 35305
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2417
+   - Fichiers manquants estimés : 32719
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1951
+   - Fichiers manquants estimés : 97848
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 1976
+   - Fichiers manquants estimés : 97957
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2566
+   - Fichiers manquants estimés : 34155
+
+📌 Résumé Date : 2025-07-17
+   - Total fichiers analysés : 13334
+   - Total fichiers manquants estimés : 395847
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-18
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2054
+   - Fichiers manquants estimés : 33869
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2243
+   - Fichiers manquants estimés : 34855
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2371
+   - Fichiers manquants estimés : 97593
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1827
+   - Fichiers manquants estimés : 32274
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 1875
+   - Fichiers manquants estimés : 32882
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2496
+   - Fichiers manquants estimés : 34304
+
+📌 Résumé Date : 2025-07-18
+   - Total fichiers analysés : 12866
+   - Total fichiers manquants estimés : 265777
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-19
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2071
+   - Fichiers manquants estimés : 33418
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2277
+   - Fichiers manquants estimés : 97697
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2488
+   - Fichiers manquants estimés : 33206
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1918
+   - Fichiers manquants estimés : 32050
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 1935
+   - Fichiers manquants estimés : 32850
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2511
+   - Fichiers manquants estimés : 97470
+
+📌 Résumé Date : 2025-07-19
+   - Total fichiers analysés : 13200
+   - Total fichiers manquants estimés : 326691
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-20
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 1899
+   - Fichiers manquants estimés : 98082
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2093
+   - Fichiers manquants estimés : 34248
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2267
+   - Fichiers manquants estimés : 32722
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1704
+   - Fichiers manquants estimés : 98276
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 1774
+   - Fichiers manquants estimés : 98203
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2218
+   - Fichiers manquants estimés : 33742
+
+📌 Résumé Date : 2025-07-20
+   - Total fichiers analysés : 11955
+   - Total fichiers manquants estimés : 395273
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-21
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2077
+   - Fichiers manquants estimés : 33042
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2275
+   - Fichiers manquants estimés : 97702
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2458
+   - Fichiers manquants estimés : 97509
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1877
+   - Fichiers manquants estimés : 31575
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 1875
+   - Fichiers manquants estimés : 32217
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2455
+   - Fichiers manquants estimés : 33746
+
+📌 Résumé Date : 2025-07-21
+   - Total fichiers analysés : 13017
+   - Total fichiers manquants estimés : 325791
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-22
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2336
+   - Fichiers manquants estimés : 35120
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2407
+   - Fichiers manquants estimés : 36075
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2575
+   - Fichiers manquants estimés : 33355
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 2034
+   - Fichiers manquants estimés : 32580
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 2009
+   - Fichiers manquants estimés : 33193
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2560
+   - Fichiers manquants estimés : 97331
+
+📌 Résumé Date : 2025-07-22
+   - Total fichiers analysés : 13921
+   - Total fichiers manquants estimés : 267654
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-23
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2178
+   - Fichiers manquants estimés : 97674
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2237
+   - Fichiers manquants estimés : 35150
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2260
+   - Fichiers manquants estimés : 32574
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1753
+   - Fichiers manquants estimés : 98175
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 1761
+   - Fichiers manquants estimés : 98189
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2234
+   - Fichiers manquants estimés : 33633
+
+📌 Résumé Date : 2025-07-23
+   - Total fichiers analysés : 12423
+   - Total fichiers manquants estimés : 395395
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-24
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2339
+   - Fichiers manquants estimés : 35282
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2334
+   - Fichiers manquants estimés : 97654
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2407
+   - Fichiers manquants estimés : 97578
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1881
+   - Fichiers manquants estimés : 31308
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 1889
+   - Fichiers manquants estimés : 32093
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2404
+   - Fichiers manquants estimés : 97588
+
+📌 Résumé Date : 2025-07-24
+   - Total fichiers analysés : 13254
+   - Total fichiers manquants estimés : 391503
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-25
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2300
+   - Fichiers manquants estimés : 97677
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2324
+   - Fichiers manquants estimés : 35221
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2399
+   - Fichiers manquants estimés : 32821
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1836
+   - Fichiers manquants estimés : 31531
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 1830
+   - Fichiers manquants estimés : 32557
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2369
+   - Fichiers manquants estimés : 33524
+
+📌 Résumé Date : 2025-07-25
+   - Total fichiers analysés : 13058
+   - Total fichiers manquants estimés : 263331
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-26
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2325
+   - Fichiers manquants estimés : 34372
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2340
+   - Fichiers manquants estimés : 34976
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2410
+   - Fichiers manquants estimés : 32583
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1885
+   - Fichiers manquants estimés : 98071
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 1861
+   - Fichiers manquants estimés : 98120
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2319
+   - Fichiers manquants estimés : 33277
+
+📌 Résumé Date : 2025-07-26
+   - Total fichiers analysés : 13140
+   - Total fichiers manquants estimés : 331399
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-27
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2035
+   - Fichiers manquants estimés : 33623
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2051
+   - Fichiers manquants estimés : 97913
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2149
+   - Fichiers manquants estimés : 97813
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1659
+   - Fichiers manquants estimés : 31124
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 1681
+   - Fichiers manquants estimés : 32119
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2037
+   - Fichiers manquants estimés : 97919
+
+📌 Résumé Date : 2025-07-27
+   - Total fichiers analysés : 11612
+   - Total fichiers manquants estimés : 390511
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-28
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2395
+   - Fichiers manquants estimés : 97583
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2314
+   - Fichiers manquants estimés : 34944
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2360
+   - Fichiers manquants estimés : 32460
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1819
+   - Fichiers manquants estimés : 31749
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 1828
+   - Fichiers manquants estimés : 32271
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2289
+   - Fichiers manquants estimés : 33337
+
+📌 Résumé Date : 2025-07-28
+   - Total fichiers analysés : 13005
+   - Total fichiers manquants estimés : 262344
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-29
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2540
+   - Fichiers manquants estimés : 35119
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2432
+   - Fichiers manquants estimés : 97534
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2539
+   - Fichiers manquants estimés : 33295
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1958
+   - Fichiers manquants estimés : 97979
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 1999
+   - Fichiers manquants estimés : 97991
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2383
+   - Fichiers manquants estimés : 34600
+
+📌 Résumé Date : 2025-07-29
+   - Total fichiers analysés : 13851
+   - Total fichiers manquants estimés : 396518
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-30
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2357
+   - Fichiers manquants estimés : 34381
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2135
+   - Fichiers manquants estimés : 34452
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2217
+   - Fichiers manquants estimés : 97744
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1669
+   - Fichiers manquants estimés : 31604
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 1740
+   - Fichiers manquants estimés : 32274
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2077
+   - Fichiers manquants estimés : 97917
+
+📌 Résumé Date : 2025-07-30
+   - Total fichiers analysés : 12195
+   - Total fichiers manquants estimés : 328372
+══════════════════════════════════════════════════
+
+📅 Date analysée : 2025-07-31
+──────────────────────────────────────────────
+🔸 Type : vou_105_601_00101
+   - Fichiers présents : 2419
+   - Fichiers manquants estimés : 97572
+
+🔸 Type : vou_101_601_00101
+   - Fichiers présents : 2164
+   - Fichiers manquants estimés : 33691
+
+🔸 Type : vou_104_601_00101
+   - Fichiers présents : 2229
+   - Fichiers manquants estimés : 31875
+
+🔸 Type : vou_103_601_00101
+   - Fichiers présents : 1745
+   - Fichiers manquants estimés : 31162
+
+🔸 Type : vou_102_601_00101
+   - Fichiers présents : 1910
+   - Fichiers manquants estimés : 31795
+
+🔸 Type : vou_106_601_00101
+   - Fichiers présents : 2091
+   - Fichiers manquants estimés : 32829
+
+📌 Résumé Date : 2025-07-31
+   - Total fichiers analysés : 12558
+   - Total fichiers manquants estimés : 258924
+══════════════════════════════════════════════════
+
