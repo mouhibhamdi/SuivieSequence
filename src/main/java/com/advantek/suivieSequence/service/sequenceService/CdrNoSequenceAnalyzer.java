@@ -53,20 +53,20 @@ public class CdrNoSequenceAnalyzer {
         LocalDate currentDate = LocalDate.parse(inputFileName); // Extract the date from file name
 
         List<String> allLines = new ArrayList<>(Files.readAllLines(inputFile));
-        System.out.println("🔍 Fichiers initiaux dans " + inputFile.getFileName() + " : " + allLines.size());
+        System.out.println("Fichiers initiaux dans " + inputFile.getFileName() + " : " + allLines.size());
 
         // Try to load carryover file for the same day
         Path carryoverFile = Paths.get("src/test/resources/carryover-" + inputFileName + ".txt");
         if (Files.exists(carryoverFile)) {
             List<String> carryLines = Files.readAllLines(carryoverFile);
-            System.out.println("📦 Fichiers carryover trouvés : " + carryLines.size());
+            System.out.println("Fichiers carryover trouvés : " + carryLines.size());
 
             allLines.addAll(carryLines);
             Files.delete(carryoverFile);
-            System.out.println("🧹 Carryover supprimé : " + carryoverFile.getFileName());
+            System.out.println("Carryover supprimé : " + carryoverFile.getFileName());
         }
 
-        System.out.println("📊 Total brut après merge : " + allLines.size());
+        System.out.println("Total brut après merge : " + allLines.size());
 
         Map<String, List<String>> groupedByType = new HashMap<>();
         Set<String> uniqueValidFiles = new HashSet<>();
@@ -95,7 +95,7 @@ public class CdrNoSequenceAnalyzer {
                                 }
                             }
                         } catch (Exception e) {
-                            System.err.println("❌ Timestamp invalide dans : " + filename);
+                            System.err.println("Timestamp invalide dans : " + filename);
                         }
                     }
                     break;
@@ -103,8 +103,8 @@ public class CdrNoSequenceAnalyzer {
             }
         }
 
-        System.out.println("✅ Fichiers valides pour la date " + currentDate + " : " + acceptedCount);
-        System.out.println("⛔ Fichiers ignorés ou dupliqués : " + skippedCount);
+        System.out.println("Fichiers valides pour la date " + currentDate + " : " + acceptedCount);
+        System.out.println("Fichiers ignorés ou dupliqués : " + skippedCount);
 
         for (Map.Entry<String, List<String>> entry : groupedByType.entrySet()) {
             String prefix = entry.getKey();
@@ -141,20 +141,20 @@ public class CdrNoSequenceAnalyzer {
                         }
                     }
                 } catch (Exception e) {
-                    System.err.println("❌ Invalid timestamp in: " + filename);
+                    System.err.println("Invalid timestamp in: " + filename);
                 }
             }
         }
 
         try (BufferedWriter writer = Files.newBufferedWriter(outputFile)) {
-            writer.write("📊 Rapport par groupes horaires (IQR)\n");
+            writer.write("Rapport par groupes horaires (IQR)\n");
             writer.write("----------------------------------------\n");
 
             int totalFiles = 0, totalAnomalies = 0, totalMissing = 0;
 
             for (TimeGroup group : groups) {
                 if (group.timestamps.size() < 2) {
-                    writer.write("📌 Groupe " + group.name + " : Pas assez de données (" + group.timestamps.size() + " fichiers)\n\n");
+                    writer.write("Groupe " + group.name + " : Pas assez de données (" + group.timestamps.size() + " fichiers)\n\n");
                     continue;
                 }
 
@@ -180,7 +180,7 @@ public class CdrNoSequenceAnalyzer {
                 double threshold = q3 + 1.5 * iqr;
                 double medianGap = sortedGaps.get(sortedGaps.size() / 2);
 
-                writer.write("📌 Groupe " + group.name + " (" + group.timestamps.size() + " fichiers)\n");
+                writer.write("Groupe " + group.name + " (" + group.timestamps.size() + " fichiers)\n");
                 writer.write(String.format("    Q1 : %.2f sec\n", q1));
                 writer.write(String.format("    Q3 : %.2f sec\n", q3));
                 writer.write(String.format("    IQR : %.2f sec\n", iqr));
@@ -200,28 +200,28 @@ public class CdrNoSequenceAnalyzer {
                         missing += estimated;
                         anomalies++;
 
-                        writer.write(String.format("       ⚠️ Gap %.2f sec entre :\n", gap));
-                        writer.write("          • " + group.filenames.get(prev) + "\n");
-                        writer.write("          • " + group.filenames.get(curr) + "\n");
-                        writer.write("          🔻 Estimation fichiers manquants : " + estimated + "\n");
+                        writer.write(String.format("Gap %.2f sec entre :\n", gap));
+                        writer.write("•" + group.filenames.get(prev) + "\n");
+                        writer.write("•" + group.filenames.get(curr) + "\n");
+                        writer.write("Estimation fichiers manquants : " + estimated + "\n");
                     }
                 }
 
                 totalAnomalies += anomalies;
                 totalMissing += missing;
 
-                writer.write("    ➤ Anomalies : " + anomalies + "\n");
-                writer.write("    ➤ Fichiers manquants estimés : " + missing + "\n\n");
+                writer.write(" ➤ Anomalies : " + anomalies + "\n");
+                writer.write(" ➤ Fichiers manquants estimés : " + missing + "\n\n");
             }
 
             writer.write("========================================\n");
-            writer.write("📊 Résumé global\n");
+            writer.write("Résumé global\n");
             writer.write("----------------------------------------\n");
             writer.write("Total fichiers analysés : " + totalFiles + "\n");
             writer.write("Total anomalies : " + totalAnomalies + "\n");
             writer.write("Total fichiers manquants estimés : " + totalMissing + "\n");
         }
 
-        System.out.println("✅ Rapport généré : " + outputFile.getFileName());
+        System.out.println("Rapport généré : " + outputFile.getFileName());
     }
 }

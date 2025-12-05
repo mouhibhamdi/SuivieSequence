@@ -9,167 +9,172 @@ import java.util.regex.*;
 
 public class SharedSequenceGapAnalyzer {
 
-    private static final Pattern FILENAME_PATTERN = Pattern.compile("([A-Z]+PGWb\\d{4})(\\d{4})(\\d{14})\\.dat\\.gz");
+    private static final Pattern FILENAME_PATTERN =
+            Pattern.compile("([A-Z]+PGWb)(\\d{3})(\\d{5})(\\d{14})\\.dat\\.gz");
+
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
 
-    static class CdrEntry {
-        String filename;
-        String subType;
-        LocalDateTime timestamp;
+    static class CdrFile {
+        String type;
+        String site;
         int sequence;
+        LocalDateTime ts;
+        String filename;
+        LocalDate day;
 
-        CdrEntry(String filename, String subType, LocalDateTime timestamp, int sequence) {
-            this.filename = filename;
-            this.subType = subType;
-            this.timestamp = timestamp;
+        CdrFile(String type, String site, int sequence, LocalDateTime ts, String filename) {
+            this.type = type;
+            this.site = site;
             this.sequence = sequence;
+            this.ts = ts;
+            this.filename = filename;
+            this.day = ts.toLocalDate();
+        }
+
+        String groupKeyGlobal() {
+            return type + "-" + site;
         }
     }
 
     public static void main(String[] args) throws IOException {
-        Path inputFile = Paths.get("src/test/resources/2025-01-10.txt");
-        String inputFileName = inputFile.getFileName().toString().replace(".txt", "");
-        LocalDate inputDate = LocalDate.parse(inputFileName);
 
-        Set<LocalDate> acceptedDates = Set.of(
-                inputDate.minusDays(2),
-                inputDate.minusDays(1),
-                inputDate
-        );
+        Path inputDirectory = Paths.get("src/test/resources/PGW_Sotelma/");
+        Path outputReport = inputDirectory.resolve("rapport_PGW_Sotelma.txt");
 
-        // 🔁 Charger le carryover lié à la date analysée (produit par analyse d'une date ultérieure)
-        Path carryPath = Paths.get("src/test/resources/carryover-" + inputDate + ".txt");
-        List<String> lines = new ArrayList<>();
-        if (Files.exists(carryPath)) {
-            lines.addAll(Files.readAllLines(carryPath));
-            System.out.println("✔️ Fichiers importés depuis le carryover : " + carryPath.getFileName());
-            Files.delete(carryPath); // Supprimer après utilisation
-        }
+        List<CdrFile> allFiles = new ArrayList<>();
 
-        // 📥 Ajouter les lignes du fichier .txt courant
-        lines.addAll(Files.readAllLines(inputFile));
+        // ===== Lire fichiers =====
+        try (DirectoryStream<Path> stream = Files.newDirectoryStream(inputDirectory, "*.txt")) {
+            for (Path file : stream) {
+                for (String line : Files.readAllLines(file)) {
+                    String trimmed = line.trim();
+                    Matcher m = FILENAME_PATTERN.matcher(trimmed);
 
-        List<CdrEntry> entries = new ArrayList<>();
+                    if (m.matches()) {
+                        String type = m.group(1);
+                        String site = m.group(2);
+                        int seq = Integer.parseInt(m.group(3));
+                        LocalDateTime ts = LocalDateTime.parse(m.group(4), DATE_FORMATTER);
 
-        for (String line : lines) {
-            String trimmed = line.trim();
-            Matcher matcher = FILENAME_PATTERN.matcher(trimmed);
-            if (matcher.matches()) {
-                String subType = matcher.group(1);
-                String seqStr = matcher.group(2);
-                String dateStr = matcher.group(3);
-                try {
-                    LocalDateTime ts = LocalDateTime.parse(dateStr, DATE_FORMATTER);
-                    LocalDate realDate = ts.toLocalDate();
-                    int seq = Integer.parseInt(seqStr);
-
-                    // ✅ Ajout aux fichiers analysés si la date réelle fait partie de la plage
-                    if (acceptedDates.contains(realDate)) {
-                        entries.add(new CdrEntry(trimmed, subType, ts, seq));
+                        allFiles.add(new CdrFile(type, site, seq, ts, trimmed));
                     }
-
-                    // 📤 Enregistrement dans le carryover si la date réelle est avant la date analysée
-                    if (realDate.isBefore(inputDate)) {
-                        Path carryTarget = Paths.get("src/test/resources/carryover-" + realDate + ".txt");
-                        Files.createDirectories(carryTarget.getParent());
-                        Files.write(carryTarget, List.of(trimmed), StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-                    }
-
-                } catch (Exception e) {
-                    System.err.println("❌ Erreur parsing : " + trimmed + " → " + e.getMessage());
                 }
-            } else {
-                System.err.println("❌ Regex ne correspond pas : " + trimmed);
             }
         }
 
-        // 🔄 Groupement par sous-type complet
-        Map<String, List<CdrEntry>> grouped = new HashMap<>();
-        for (CdrEntry entry : entries) {
-            grouped.computeIfAbsent(entry.subType, k -> new ArrayList<>()).add(entry);
-        }
+        // ===== Regroupement par type-site) =====
+        Map<String, List<CdrFile>> grouped = new TreeMap<>();
+        for (CdrFile f : allFiles) grouped.computeIfAbsent(f.groupKeyGlobal(), k -> new ArrayList<>()).add(f);
 
-        // Variables pour résumé détaillé
-        Map<String, Integer> anomaliesParSousType = new HashMap<>();
-        Map<String, Integer> manquantsParSousType = new HashMap<>();
-        Map<String, Integer> fichiersParSousType = new HashMap<>();
+        Map<String, List<String>> missingPerGroup = new TreeMap<>();
+        Map<String, Integer> missingCountPerGroup = new TreeMap<>();
 
-        Path reportFile = Paths.get("src/test/resources/cdr-shared-sequence-report-" + inputDate + ".txt");
-        Files.createDirectories(reportFile.getParent());
 
-        try (BufferedWriter writer = Files.newBufferedWriter(reportFile)) {
-            writer.write("📊 Rapport Anomalies CDR par Sous-Type complet\n");
-            writer.write("Date analysée : " + inputDate + "\n");
-            writer.write("Fenêtre glissante : " + inputDate.minusDays(2) + " → " + inputDate + "\n\n");
+        // ===== ANALYSE =====
+        for (String groupKey : grouped.keySet()) {
 
+            List<CdrFile> list = grouped.get(groupKey);
+
+            // Tri global :sequence, puis timestamp
+            list.sort(Comparator.comparingInt((CdrFile f) -> f.sequence)
+                    .thenComparing(f -> f.ts));
+
+            // ==== Construire flux journaliers d'abord ====
+            List<List<CdrFile>> dailyFlux = new ArrayList<>();
+            List<CdrFile> currentFlux = new ArrayList<>();
+            currentFlux.add(list.get(0));
+
+            for (int i = 1; i < list.size(); i++) {
+                CdrFile prev = list.get(i - 1);
+                CdrFile curr = list.get(i);
+                boolean newFlux = false;
+
+                if (curr.sequence < prev.sequence || curr.sequence - prev.sequence > 2000) newFlux = true;
+                if (Duration.between(prev.ts, curr.ts).toHours() > 2) newFlux = true;
+
+                if (newFlux) {
+                    dailyFlux.add(new ArrayList<>(currentFlux));
+                    currentFlux.clear();
+                }
+                currentFlux.add(curr);
+            }
+            dailyFlux.add(currentFlux);
+
+            // ==== Fusion inter-jour ====
+            List<List<CdrFile>> mergedFlux = getLists(dailyFlux);
+
+            // ==== alcul des gaps dans les flux fusionnés ====
+            List<String> missingRanges = new ArrayList<>();
             int totalMissing = 0;
-            int totalAnomalies = 0;
 
-            for (Map.Entry<String, List<CdrEntry>> entry : grouped.entrySet()) {
-                String subType = entry.getKey();
-                List<CdrEntry> groupEntries = entry.getValue();
+            for (List<CdrFile> flux : mergedFlux) {
+                List<Integer> seq = flux.stream().map(f -> f.sequence).sorted().toList();
 
-                // ✅ Tri par séquence PUIS timestamp
-                groupEntries.sort(
-                        Comparator.comparingInt((CdrEntry e) -> e.sequence)
-                                .thenComparing(e -> e.timestamp)
-                );
+                for (int i = 1; i < seq.size(); i++) {
+                    int prev = seq.get(i - 1);
+                    int curr = seq.get(i);
 
-                // // 📝 Export du tri pour vérification (désactivé)
-                // Path sortedFile = Paths.get("src/test/resources/sorted-" + subType + "-" + inputDate + ".txt");
-                // try (BufferedWriter sortWriter = Files.newBufferedWriter(sortedFile)) {
-                //     for (CdrEntry cdr : groupEntries) {
-                //         sortWriter.write(String.format(
-                //                 "SEQ=%04d | %s | %s\n",
-                //                 cdr.sequence,
-                //                 cdr.timestamp.format(DATE_FORMATTER),
-                //                 cdr.filename
-                //         ));
-                //     }
-                // }
-
-                int anomalyCount = 0;
-                int missingCount = 0;
-
-                for (int i = 1; i < groupEntries.size(); i++) {
-                    int prev = groupEntries.get(i - 1).sequence;
-                    int curr = groupEntries.get(i).sequence;
-                    int gap = curr - prev;
-                    if (gap < 0) {
-                        gap = curr + (9999 - prev) + 1;
-                    }
-
-                    if (gap > 1) {
-                        int missing = gap - 1;
-                        missingCount += missing;
-                        anomalyCount++;
-
-                        writer.write("   ⚠️ Gap de " + gap + " entre :\n");
-                        writer.write("      • " + groupEntries.get(i - 1).filename + "\n");
-                        writer.write("      • " + groupEntries.get(i).filename + "\n");
-                        writer.write("      🔻 Estimation fichiers manquants : " + missing + "\n");
+                    if (curr - prev > 1) {
+                        missingRanges.add((prev + 1) + " → " + (curr - 1));
+                        totalMissing += (curr - prev - 1);
                     }
                 }
-
-                writer.write("🔹 Sous-Type : " + subType + "\n");
-                writer.write("   Fichiers analysés : " + groupEntries.size() + "\n");
-                writer.write("   ➤ Total anomalies : " + anomalyCount + "\n");
-                writer.write("   ➤ Fichiers manquants estimés : " + missingCount + "\n\n");
-
-                anomaliesParSousType.put(subType, anomalyCount);
-                manquantsParSousType.put(subType, missingCount);
-                fichiersParSousType.put(subType, groupEntries.size());
-
-                totalMissing += missingCount;
-                totalAnomalies += anomalyCount;
             }
 
-            writer.write("📌 Résumé global\n");
-            writer.write("------------------------\n");
-            writer.write("Total anomalies détectées : " + totalAnomalies + "\n");
-            writer.write("Total fichiers manquants estimés : " + totalMissing + "\n\n");
+            missingPerGroup.put(groupKey, missingRanges);
+            missingCountPerGroup.put(groupKey, totalMissing);
         }
 
-        System.out.println("✅ Rapport généré : " + reportFile.getFileName());
+        // ===== Écriture Rapport =====
+        try (BufferedWriter writer = Files.newBufferedWriter(outputReport)) {
+
+            int totalFilesMissing = missingCountPerGroup.values().stream().mapToInt(Integer::intValue).sum();
+
+            writer.write("===== STATISTIQUES GLOBALES =====\n");
+            writer.write("Total fichiers analysés : " + allFiles.size() + "\n");
+            writer.write("Total fichiers manquants : " + totalFilesMissing + "\n\n");
+
+            // ===== DETAIL PAR GROUPE =====
+            for (String group : missingPerGroup.keySet()) {
+
+                writer.write("Groupe : " + group + "\n");
+
+                // gaps
+                List<String> ranges = missingPerGroup.get(group);
+                int missing = missingCountPerGroup.get(group);
+
+                if (ranges.isEmpty()) {
+                    writer.write("  Aucun fichier manquant ✓\n\n");
+                } else {
+                    writer.write("  Séquences manquantes :\n");
+                    for (String r : ranges) writer.write("    - " + r + "\n");
+                    writer.write("  Total manquants : " + missing + "\n\n");
+                }
+            }
+        }
+
+        System.out.println("Rapport généré : " + outputReport.getFileName());
+    }
+
+    private static List<List<CdrFile>> getLists(List<List<CdrFile>> dailyFlux) {
+        List<List<CdrFile>> mergedFlux = new ArrayList<>();
+        List<CdrFile> currMerged = new ArrayList<>(dailyFlux.get(0));
+
+        for (int i = 1; i < dailyFlux.size(); i++) {
+
+            List<CdrFile> next = dailyFlux.get(i);
+
+            int lastSeq = currMerged.get(currMerged.size() - 1).sequence;
+            int firstSeqNext = next.get(0).sequence;
+
+            if (firstSeqNext == lastSeq + 1) {
+                currMerged.addAll(next);
+            } else {
+                mergedFlux.add(currMerged);
+                currMerged = new ArrayList<>(next);
+            }
+        }
+        mergedFlux.add(currMerged);
+        return mergedFlux;
     }
 }
