@@ -27,9 +27,12 @@ public class CdrFilesGroupId {
     private String category;
     @Column(name = "noeud")
     private String noeud;
-    @Column(nullable = false, name = "unreceived_seq_set")
+
     @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "cdr_files_group_id_unreceived_seq_set", joinColumns = @JoinColumn(name = "cdr_files_group_id_id"))
+    @Column(name = "unreceived_seq_set")
     private List<Integer> unreceivedSeqSet;
+
     @Column(nullable = false)
     private int max;
     @Column
@@ -49,7 +52,7 @@ public class CdrFilesGroupId {
         this.unreceivedSeqSet = new ArrayList<>();
     }
 
-    public CdrFilesGroupId(String cdrType, String cdrGroup, String category, String noeud, LocalDate date,  int min) {
+    public CdrFilesGroupId(String cdrType, String cdrGroup, String category, String noeud, LocalDate date, int min) {
         this.date = date;
         this.cdrType = cdrType;
         this.cdrGroup = cdrGroup;
@@ -61,7 +64,7 @@ public class CdrFilesGroupId {
         this.unreceivedSeqSet = new ArrayList<>();
     }
 
-    public boolean isResetCounterCase(){
+    public boolean isResetCounterCase() {
         return this.min > this.max;
     }
 }

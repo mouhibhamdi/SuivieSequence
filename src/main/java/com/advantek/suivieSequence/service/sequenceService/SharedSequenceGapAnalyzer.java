@@ -103,7 +103,7 @@ public class SharedSequenceGapAnalyzer {
             // ==== Fusion inter-jour ====
             List<List<CdrFile>> mergedFlux = getLists(dailyFlux);
 
-            // ==== alcul des gaps dans les flux fusionnés ====
+            // ==== calcul des gaps dans les flux fusionnés ====
             List<String> missingRanges = new ArrayList<>();
             int totalMissing = 0;
 
